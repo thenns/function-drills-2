@@ -38,15 +38,17 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE 
-
+function first (arr, first) {
+    first(arr[0]);
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// first(names, firstName => {
-//   console.log('The first name in names is ' + firstName)
-// })
+first(names, firstName => {
+    console.log('The first name in names is ' + firstName)
+})
 
 
 
@@ -58,15 +60,20 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
+function last (arr, last) {
+    lastIndex = arr.length;
+    last(arr[lastIndex - 1]);
+}
+
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// last(names, lastName => {
-//   console.log('The last name in names is ' + lastName)
-// })
+last(names, lastName => {
+  console.log('The last name in names is ' + lastName)
+})
 
 
 
@@ -80,19 +87,34 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE 
-
+function contains (arr, name, contains) {
+    let containsName;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === name) {
+            containsName = true;
+            break;
+        } else {
+            containsName = false;
+        }
+    }
+    if (containsName) {
+        contains(true);
+    } else {
+        contains(false);
+    }
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// contains(names, 'Colt', result => {
-//   if(result === true){
-//     console.log('Colt is in the array')
-//   } else {
-//     console.log('Colt is not in the array')
-//   }
-// })
+contains(names, 'Colt', result => {
+    if(result === true){
+        console.log('Colt is in the array')
+    } else {
+        console.log('Colt is not in the array')
+    }
+})
 
 
 
@@ -105,6 +127,9 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
+function uniq (arr, uniq) {
+    
+}
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
