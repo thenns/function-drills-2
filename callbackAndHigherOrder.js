@@ -127,8 +127,16 @@ contains(names, 'Colt', result => {
 */
 
 // CODE HERE
-function uniq (arr, uniq) {
-    
+function uniq (arr, cb) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++ ) {
+            if (arr[i] === arr[j]) {
+                arr.splice(j, 1);
+                j--;
+            }
+        }
+    }
+    cb(arr);
 }
 
 /*
@@ -139,7 +147,7 @@ function uniq (arr, uniq) {
 */
 
 // CODE HERE
-
+uniq(names, uniqArr => console.log(`the new names array with all the duplicate items removed is ${uniqArr}`))
 
 
 ////////// PROBLEM 6 //////////
@@ -150,6 +158,11 @@ function uniq (arr, uniq) {
 */
 
 // CODE HERE 
+function each (namesArr, cb) {
+    for (let i = 0; i < namesArr.length; i++) {
+        cb(namesArr[i], i);
+    }
+}
 
 
 /*
@@ -160,7 +173,11 @@ function uniq (arr, uniq) {
 */
 
 // CODE HERE
+function cb(item, index) {
+    console.log(`the item at index ${index} is ${item}`);
+}
 
+each (names, cb);
 
 ////////// PROBLEM 7 //////////
 
